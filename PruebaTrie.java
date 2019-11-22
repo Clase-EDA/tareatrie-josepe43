@@ -146,9 +146,14 @@ public class PruebaTrie {
         st = System.nanoTime();
         cargaPalabras(nombreArch, t);
         end = System.nanoTime();
-        
+        String [] s = t.toStringArray();
+        long ar = System.nanoTime();
         System.out.println("Valores trie:");
         System.out.println("Tiempo para insertar palabras ordenadas:");
         System.out.println(end - st);
+        System.out.println("Tiempo para insertar las palabras ordenadas en un arreglo:");
+        System.out.println(ar-end);
+        System.out.println("Tiempo total");
+        System.out.println(ar-st);
     }//main
 }//class
